@@ -1,9 +1,5 @@
 <template>
 
-  <!--  <router-view/>-->
-<!--  <main-layout></main-layout>-->
-<!--  <auth-layout></auth-layout>-->
-
   <component :is=" layout+'-layout'" v-if="layout"/>
 
 </template>
@@ -17,7 +13,6 @@ import AuthLayout from "@/layout/AuthLayout";
 export default {
   setup() {
     const route = useRoute()
-
 
     return{
       layout: computed(()=>route.meta.layout)

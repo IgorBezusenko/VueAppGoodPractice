@@ -15,12 +15,12 @@
     </div>
 
     <button class="btn primary" type="submit" :disabled="isSubmitting || isTooManyAttempts">Войти</button>
-    <div class="text-danger" v-if="isTooManyAttempts">Вы слишком часто пытаетешь войти. Попробуйте позже</div>
+    <div class="text-danger" v-if="isTooManyAttempts">Вы слишком часто пытаетесь войти. Попробуйте позже</div>
   </form>
 </template>
 
 <script>
-import {useLoginForm} from "@/use/LoginForm";
+import {useLoginForm} from "@/use/login-form";
 
 export default {
 
