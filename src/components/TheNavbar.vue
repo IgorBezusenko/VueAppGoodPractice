@@ -7,13 +7,13 @@
         <router-link to="/">Заявки</router-link>
       </li>
       <li>
-        <router-link to="/">Помощь</router-link>
+        <router-link to="/help">Помощь</router-link>
       </li>
       <li>
-        <router-link to="/">Сообщения</router-link>
+        <a href="#" >Сообщения</a>
       </li>
       <li>
-        <router-link to="/" @click="logout">Выход</router-link>
+        <a href="#"  @click.prevent="logout">Выход</a>
       </li>
     </ul>
   </div>
