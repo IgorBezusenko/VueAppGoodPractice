@@ -54,6 +54,21 @@ export default {
                 }, {root: true})
             }
         },
+        async loadById({commit, dispatch}, id) {
+            try {
+                const token = store.getters['auth/token']
+                const {data} = await axios
+                    .get(`/requests/${id}.json?auth=${token}`)
+
+                return data
+
+            } catch (e) {
+                dispatch('setMessage', {
+                    value: e.message,
+                    type: 'danger'
+                }, {root: true})
+            }
+        },
     },
 
     getters: {
