@@ -26,7 +26,6 @@
         <option value="cancelled">Отменен</option>
         <option value="pending">Выполняется</option>
       </select>
-
     </div>
 
     <button class="btn primary" :disabled="isSubmitting">Создать</button>
